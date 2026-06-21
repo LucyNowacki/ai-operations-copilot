@@ -2,9 +2,11 @@
 
 Use these after the project is pushed to GitHub or added to the portfolio site.
 
+Live dashboard: <https://ai-operations-copilot-lucynowacki.streamlit.app/>
+
 ## AI Operations / Gravitee-Style Role
 
-- Built a portfolio-aware AI Operations Copilot in Python that converts messy project notes into structured launch briefs using schema-validated LLM-style extraction, SQLite audit storage and human-in-the-loop review.
+- Built and deployed a portfolio-aware AI Operations Copilot in Python and Streamlit that converts messy project notes into structured launch briefs using schema-validated LLM-style extraction, SQLite audit storage and human-in-the-loop review.
 - Designed n8n-style webhook automation and review callbacks for AI-agent workflows, showing how model outputs can be governed before they trigger downstream actions.
 
 ## Data Analyst / Analytics Role
@@ -24,4 +26,4 @@ Use these after the project is pushed to GitHub or added to the portfolio site.
 
 ## Cover-Letter Paragraph
 
-I recently built an AI Operations Copilot / Career Proof Engine that shows how I would integrate modern AI into useful end-user workflows: structured extraction from messy project notes, Pydantic validation, SQLite storage, human review gates, Streamlit dashboards, n8n-style webhook design, tests and responsible-AI governance. The examples are grounded in my public portfolio and GitHub, connecting mathematical AI, medical AI, recommender systems, fintech analytics, climate modelling, NLP deployment and robotics workflows to practical operating outputs.
+I recently built and deployed an AI Operations Copilot / Career Proof Engine that shows how I would integrate modern AI into useful end-user workflows: structured extraction from messy project notes, Pydantic validation, SQLite storage, human review gates, a live Streamlit dashboard, n8n-style webhook design, tests and responsible-AI governance. The examples are grounded in my public portfolio and GitHub, connecting mathematical AI, medical AI, recommender systems, fintech analytics, climate modelling, NLP deployment and robotics workflows to practical operating outputs.

@@ -77,7 +77,11 @@ streamlit run dashboard/app.py
 
 ## View The Dashboard Online
 
-The dashboard can be deployed as a public web app with Streamlit Community Cloud. Use:
+Live dashboard:
+
+https://ai-operations-copilot-lucynowacki.streamlit.app/
+
+The dashboard is deployed as a public web app with Streamlit Community Cloud. Deployment settings:
 
 - repository: `LucyNowacki/ai-operations-copilot`
 - branch: `main`
@@ -87,7 +91,8 @@ The hosted dashboard automatically creates its demo SQLite database from `data/e
 
 Recruiter-facing wording:
 
-> A live dashboard is available for recruiters and hiring managers to explore the AI Operations Copilot workflow, including structured project briefs, risks, owners, priorities, review status and portfolio-grounded AI examples.
+> Live dashboard: https://ai-operations-copilot-lucynowacki.streamlit.app/  
+> Recruiters and hiring managers can explore the AI Operations Copilot workflow online, including structured project briefs, risks, owners, priorities, review status and portfolio-grounded AI examples.
 
 Generated outputs:
 
@@ -165,7 +170,7 @@ n8n, Codex, Cursor, Claude Code and GitHub Copilot are workflow aids, not runtim
 
 ### AI Operations / Gravitee-Style Role
 
-- Built a portfolio-aware AI Operations Copilot in Python that converts messy project notes into structured launch briefs using schema-validated LLM-style extraction, SQLite audit storage and human-in-the-loop review.
+- Built and deployed a portfolio-aware AI Operations Copilot in Python and Streamlit that converts messy project notes into structured launch briefs using schema-validated LLM-style extraction, SQLite audit storage and human-in-the-loop review.
 - Designed n8n-style webhook automation and review callbacks for AI-agent workflows, showing how model outputs can be governed before they trigger downstream actions.
 
 ### Data Analyst / Analytics Role
