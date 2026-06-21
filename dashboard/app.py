@@ -15,6 +15,7 @@ if str(PROJECT_ROOT) not in sys.path:
 from dashboard.data import brief_rows, open_risks, priority_distribution, review_queue, status_summary, unresolved_questions
 
 DEFAULT_DB = PROJECT_ROOT / "outputs" / "career_proof.db"
+DEFAULT_EXAMPLES = PROJECT_ROOT / "data" / "examples"
 
 PROJECT_LINKS = {
     "climate_modelling": "https://lucynowacki.github.io/blog/dmd-for-el-nino/",
@@ -35,6 +36,7 @@ def main() -> None:
     st.sidebar.header("Data")
     st.sidebar.code(str(db_path))
 
+    ensure_demo_database(db_path)
     briefs = brief_rows(db_path)
     if briefs.empty:
         st.warning("No project briefs found. Run `python -m ai_ops_copilot.cli run-demo` first.")
@@ -77,6 +79,18 @@ def main() -> None:
         )
     with tab_status:
         st.dataframe(status_summary(db_path), use_container_width=True, hide_index=True)
+
+
+def ensure_demo_database(db_path: Path) -> None:
+    if db_path.exists():
+        return
+    try:
+        from ai_ops_copilot.pipeline import run_demo
+
+        run_demo(DEFAULT_EXAMPLES, db_path.parent, db_path.name)
+    except Exception as exc:
+        st.warning(f"Could not create demo database automatically: {exc}")
+
 
 def compact_description(row) -> str:
     value = str(row.get("business_value", "")).strip()

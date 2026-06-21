@@ -75,6 +75,20 @@ python -m ai_ops_copilot.cli export-summary
 streamlit run dashboard/app.py
 ```
 
+## View The Dashboard Online
+
+The dashboard can be deployed as a public web app with Streamlit Community Cloud. Use:
+
+- repository: `LucyNowacki/ai-operations-copilot`
+- branch: `main`
+- main file path: `dashboard/app.py`
+
+The hosted dashboard automatically creates its demo SQLite database from `data/examples/` if no local database exists. No API keys are needed for the offline demo.
+
+Recruiter-facing wording:
+
+> A live dashboard is available for recruiters and hiring managers to explore the AI Operations Copilot workflow, including structured project briefs, risks, owners, priorities, review status and portfolio-grounded AI examples.
+
 Generated outputs:
 
 - `outputs/career_proof.db`
