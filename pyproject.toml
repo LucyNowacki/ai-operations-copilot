@@ -1,0 +1,23 @@
+[project]
+name = "ai-operations-copilot"
+version = "0.1.0"
+description = "Portfolio AI operations copilot with structured extraction, review gates and webhook payloads."
+requires-python = ">=3.11"
+authors = [{ name = "Lucy Nowacki" }]
+dependencies = [
+  "pydantic>=2.0",
+  "pandas>=2.0",
+  "streamlit>=1.30",
+  "plotly>=5.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+live-llm = []
+
+[project.scripts]
+ai-ops-copilot = "ai_ops_copilot.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

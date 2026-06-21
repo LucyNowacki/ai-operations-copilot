@@ -1,0 +1,17 @@
+.env
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+
+# Local Streamlit/runtime files
+.streamlit/secrets.toml
+
+# Generated local databases
+outputs/*.db
+outputs/*.sqlite
+outputs/*.sqlite3

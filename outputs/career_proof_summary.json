@@ -1,0 +1,108 @@
+{
+  "brief_count": 6,
+  "domain_distribution": {
+    "climate_modelling": 1,
+    "fintech_analytics": 1,
+    "medical_ai": 1,
+    "nlp_deployment": 1,
+    "recommender_systems": 1,
+    "robotics_agents": 1
+  },
+  "finalisable_count": 2,
+  "open_risks": [
+    {
+      "brief_id": "BRIEF-0001",
+      "description": "DMD patterns could be over-interpreted without source checking.",
+      "mitigation": "Keep source references and validation notes with every brief.",
+      "severity": "high",
+      "title": "Climate-Risk DMD Modelling Brief"
+    },
+    {
+      "brief_id": "BRIEF-0002",
+      "description": "Financial risk output could be mistaken for investment advice.",
+      "mitigation": "Label analytics as decision support and require review.",
+      "severity": "critical",
+      "title": "Fintech Options Risk Analytics Brief"
+    },
+    {
+      "brief_id": "BRIEF-0003",
+      "description": "Clinical or patient-safety output could be over-trusted.",
+      "mitigation": "Keep outputs advisory and require expert approval.",
+      "severity": "high",
+      "title": "Medical AI Wound Diagnostics Launch Brief"
+    },
+    {
+      "brief_id": "BRIEF-0004",
+      "description": "NLP moderation may contain bias or robustness failures.",
+      "mitigation": "Use adversarial tests and human review for sensitive content.",
+      "severity": "medium",
+      "title": "NLP Hate-Speech Azure Deployment Brief"
+    },
+    {
+      "brief_id": "BRIEF-0005",
+      "description": "Autonomous workflow could create safety or defence misuse risk.",
+      "mitigation": "Require explicit human approval before operational use.",
+      "severity": "critical",
+      "title": "Robotics Drone Agent Workflow Brief"
+    },
+    {
+      "brief_id": "BRIEF-0006",
+      "description": "Semantic search may surface plausible but weakly relevant recommendations.",
+      "mitigation": "Evaluate retrieval quality and expose confidence.",
+      "severity": "medium",
+      "title": "Semantic Recommender Product Brief"
+    }
+  ],
+  "priority_distribution": {
+    "critical": 2,
+    "high": 2,
+    "medium": 2
+  },
+  "review_queue_count": 4,
+  "table_counts": {
+    "actions": 6,
+    "audit_events": 6,
+    "briefs": 6,
+    "notes": 6,
+    "questions": 7,
+    "review_decisions": 0,
+    "risks": 6
+  },
+  "unresolved_questions": [
+    {
+      "brief_id": "BRIEF-0001",
+      "question": "Who must approve the high-risk output before it is finalised?",
+      "title": "Climate-Risk DMD Modelling Brief"
+    },
+    {
+      "brief_id": "BRIEF-0002",
+      "question": "Who must approve the high-risk output before it is finalised?",
+      "title": "Fintech Options Risk Analytics Brief"
+    },
+    {
+      "brief_id": "BRIEF-0003",
+      "question": "Who must approve the high-risk output before it is finalised?",
+      "title": "Medical AI Wound Diagnostics Launch Brief"
+    },
+    {
+      "brief_id": "BRIEF-0004",
+      "question": "Which source data or evidence should be checked before implementation?",
+      "title": "NLP Hate-Speech Azure Deployment Brief"
+    },
+    {
+      "brief_id": "BRIEF-0005",
+      "question": "Who must approve the high-risk output before it is finalised?",
+      "title": "Robotics Drone Agent Workflow Brief"
+    },
+    {
+      "brief_id": "BRIEF-0005",
+      "question": "Which source data or evidence should be checked before implementation?",
+      "title": "Robotics Drone Agent Workflow Brief"
+    },
+    {
+      "brief_id": "BRIEF-0006",
+      "question": "What evidence would make this brief ready for stakeholder sign-off?",
+      "title": "Semantic Recommender Product Brief"
+    }
+  ]
+}

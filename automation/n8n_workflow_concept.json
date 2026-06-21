@@ -1,0 +1,57 @@
+{
+  "name": "Career Proof Engine Review Flow",
+  "nodes": [
+    {
+      "name": "Webhook: Project Note",
+      "type": "n8n-nodes-base.webhook",
+      "parameters": {
+        "path": "career-proof/project-note",
+        "httpMethod": "POST"
+      }
+    },
+    {
+      "name": "Run Extraction",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "POST",
+        "url": "https://ops.example.test/career-proof/extract",
+        "bodyParametersJson": "={{JSON.stringify($json)}}"
+      }
+    },
+    {
+      "name": "Needs Review?",
+      "type": "n8n-nodes-base.if",
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.review_state}}",
+              "operation": "equals",
+              "value2": "pending_review"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Notify Human Reviewer",
+      "type": "n8n-nodes-base.httpRequest",
+      "parameters": {
+        "method": "POST",
+        "url": "https://ops.example.test/reviewer/tasks",
+        "bodyParametersJson": "={{JSON.stringify($json)}}"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook: Project Note": {
+      "main": [[{"node": "Run Extraction", "type": "main", "index": 0}]]
+    },
+    "Run Extraction": {
+      "main": [[{"node": "Needs Review?", "type": "main", "index": 0}]]
+    },
+    "Needs Review?": {
+      "main": [[{"node": "Notify Human Reviewer", "type": "main", "index": 0}], []]
+    }
+  }
+}

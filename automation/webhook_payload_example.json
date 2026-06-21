@@ -1,0 +1,8 @@
+{
+  "event": "project_note.created",
+  "source": "crm_note",
+  "title": "Medical AI Wound Diagnostics Launch Brief",
+  "owner": "Lucy Nowacki",
+  "created_at": "2026-06-21",
+  "raw_text": "Prepare a launch brief for a mobile wound-diagnostics assistant. It must support clinicians, protect patient data and require human review before any clinical output is finalised."
+}
